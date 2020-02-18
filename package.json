@@ -1,13 +1,20 @@
 {
-  "name": "application",
+  "name": "star-wars-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-server": "node server/.",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "server-prebuild": "tslint -c server/tslint.json -p server/tsconfig.json --fix",
+    "server-build": "tsc --p server",
+    "postinstall-real": "npm run client-build && npm run server-prebuild && npm run server-build",
+    "postinstall": "npm run server-prebuild && npm run server-build",
+    "nodemon-local-init": "npm run postinstall && npm run start-server ",
+    "nodemon-local": "nodemon --watch src --watch server/src --ext ts --exec npm run nodemon-local-init -V"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +26,18 @@
     "@angular/platform-browser": "~9.0.1",
     "@angular/platform-browser-dynamic": "~9.0.1",
     "@angular/router": "~9.0.1",
+    "@types/express": "^4.17.2",
+    "@types/express-session": "^1.15.16",
+    "@types/lodash": "^4.14.149",
+    "@types/morgan": "^1.7.37",
+    "@types/request": "^2.48.4",
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "lodash": "^4.17.15",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
