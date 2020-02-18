@@ -1,0 +1,6 @@
+{
+  "name": "starwars-server",
+  "version": "1.0.0",
+  "description": "backend api endpoint to send deliver star wars data to client",
+  "main": "dist/index.js"
+}
