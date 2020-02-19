@@ -38,6 +38,89 @@
       </table>
     </div>
   </div>
+  <ng-container *ngIf="character.home_planet">
+    <div class="row">
+      <h1>Home Planet</h1>
+    </div>
+    <div class="row">
+      <div class=" col-sm col-md-8 col-lg-6">
+        <table class="table table-hover">
+          <tbody>
+          <tr>
+            <th scope="row">Title:</th>
+            <td>{{character.home_planet.title}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Terrain:</th>
+            <td>{{character.home_planet.terrain}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Population:</th>
+            <td>{{character.home_planet.population}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="character.species">
+    <div class="row">
+      <h1>Species</h1>
+    </div>
+    <div class="row" *ngFor="let specie of character.species">
+      <div class=" col-sm col-md-8 col-lg-6">
+        <table class="table table-hover">
+          <tbody>
+          <tr>
+            <th scope="row">Name:</th>
+            <td>{{specie.name}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Average Lifespan:</th>
+            <td>{{specie.average_lifespan}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Classification:</th>
+            <td>{{specie.classification}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Language:</th>
+            <td>{{specie.language}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="character.films">
+    <div class="row">
+      <h1>Films</h1>
+    </div>
+    <div class="row mb-4" *ngFor="let film of character.films">
+      <div class=" col-sm col-md-8 col-lg-6">
+        <table class="table table-hover">
+          <tbody>
+          <tr>
+            <th scope="row">Title:</th>
+            <td>{{film.title}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Director:</th>
+            <td>{{film.director}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Producers:</th>
+            <td *ngFor="let producer of film.producer.split(',')">{{producer}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Release Date:</th>
+            <td>{{film.release_date}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ng-container>
 </div>
 
 <div class="container" *ngIf="error">
