@@ -7,7 +7,7 @@ Star-wars client-server app to access star wars characters by their id
 2. run `npm run local-app-init`
 3. access site using the link provided in the cli once build is complete and server is running
 
-#Angular Boilerplate ReadMe Start
+# Angular Boilerplate ReadMe Start
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
 ## Development server
