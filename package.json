@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "start-server": "node server/.",
-    "local-app-init": "npm run postinstall && npm run start-server ",
+    "start-local": "ng serve",
+    "start": "node server/.",
+    "local-app-init": "npm run postinstall && npm start",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
