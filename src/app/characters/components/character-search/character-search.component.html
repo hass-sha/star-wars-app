@@ -1,0 +1,13 @@
+<div class="row container">
+  <div class="d-sm-none col-lg-2 d-lg-block"></div>
+  <div class="col-sm col-lg-10">
+    <h3>Not one of the characters you are looking for? Try their Id?</h3>
+    <form [formGroup]="searchForm" (ngSubmit)="findCharacter()">
+      <div class="form-group">
+        <input type="text" id="search" [formControlName]="'search'" class="form-control mb-1" placeholder="Search">
+        <button type="submit" class="btn btn-primary btn-block"
+                [disabled]="!searchForm.valid" [ngClass]="{'btn-danger': !searchForm.valid}">Find</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<app-character-search></app-character-search>
+<div class="row container">
+  <div class="d-sm-none col-lg-2 d-lg-block"></div>
+  <div class="col-sm col-lg-10">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let character of characters">
+        <app-character-card [character]="character"></app-character-card>
+      </div>
+    </div>
+  </div>
+</div>

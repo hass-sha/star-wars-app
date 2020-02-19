@@ -70,3 +70,8 @@ export interface Film {
   edited: Date;
   url: string;
 }
+
+export interface APIError {
+  error: number;
+  message: string;
+}

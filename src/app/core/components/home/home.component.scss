@@ -1,0 +1,12 @@
+.characters-btn {
+  height: 500px;
+  background-image: url("src/assets/images/star-wars-characters.png");
+  background-size: cover;
+  background-position: 10px 10px;
+
+  &:active {
+    background-color: white !important;
+    background-image: none;
+    color: black !important;
+  }
+}
